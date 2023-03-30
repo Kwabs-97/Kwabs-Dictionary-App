@@ -41,7 +41,7 @@ btn.addEventListener("click", async () => {
             </div>
             `;
   } catch (e) {
-    console.log(e.message);
+    result.innerHTML = `<h3> Couldn't locate this word </h3>`;
   }
 });
 
