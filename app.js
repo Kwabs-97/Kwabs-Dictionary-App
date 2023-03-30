@@ -13,7 +13,7 @@ btn.addEventListener("click", async () => {
     let partOfSpeech = res.data[0].meanings[0].partOfSpeech;
     let phonetic = res.data[0].phonetic;
     let phonetics = res.data[0].phonetics;
-    const filteredPhonetics = phonetics.filter((a) => a.audio !== "")[0].audio;
+    const filteredPhonetics = phonetics.filter((a) => a.audio !== "")[0]?.audio;
     console.log(filteredPhonetics);
     sound.setAttribute("src", `${filteredPhonetics}`);
 
